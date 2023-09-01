@@ -1,10 +1,6 @@
 {
   "name": "gbot-war",
-<<<<<<< HEAD
-  "version": "1.0.3",
-=======
-  "version": "1.2.5",
->>>>>>> 7cb0778 (Fix Update)
+  "version": "1.0.0",
   "description": "Gbot is a utility for mass spamming and cursing others in messager group mailboxes developed by NhatVu",
   "main": "index.js",
   "scripts": {
@@ -13,7 +9,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhatcoder2003/gbot-war.git"
+    "url": "git+https://github.com/nhatcoder2003/Gbot-War.git"
   },
   "keywords": [
     "Nhatcoder",
@@ -22,11 +18,11 @@
     "gbot"
   ],
   "author": "Nhat Vu",
-  "license": "MIT ",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nhatcoder2003/gbot-war/issues"
+    "url": "https://github.com/nhatcoder2003/Gbot-War/issues"
   },
-  "homepage": "https://github.com/nhatcoder2003/gbot-war#readme",
+  "homepage": "https://github.com/nhatcoder2003/Gbot-War#readme",
   "dependencies": {
     "@replit/database": "^2.0.5",
     "axios": "^1.4.0",
