@@ -1,10 +1,10 @@
 {
   "name": "gbot-war",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Gbot is a utility for mass spamming and cursing others in messager group mailboxes developed by NhatVu",
   "main": "index.js",
   "scripts": {
-    "start": "node index"
+    "start": "node index "
   },
   "type": "module",
   "repository": {
