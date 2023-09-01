@@ -1,22 +1,4 @@
-/**
-* @author      Nhatcoder
-* @version     1.0.0
-* @homeurl     https://github.com/nhatcoder2003/gbot
-* @author_url     https://www.facebook.com/vuminhnhat10092003
-*/
-/**
-* Vietnamese:
-*- Vui lòng không xóa dòng này
-*- Đây là động lực giúp tôi cung cấp nhưng sản miễn phí và chất lượng tới cộng đồng
-*- Bất kỳ hành động sửa đổi nào sẽ ảnh hưởng tới mã nguồn hoặc dẫn tới bạn bị cấm sử dụng tiện ích dòng lệnh của alphabot
-*- Bản quyền © 2023 Nhatcoder2k3
-* -----------------------------------
-* English:
-*- Please do not delete this line
-*- This is my motivation to provide free and quality products to the community
-*- Any modification will affect the source code or lead to you being banned from using the alphabot command line utility
-*- Copyright © 2023 Nhatcoder2k3
-*/
+
 import {
   readFileSync,
   writeFileSync,
@@ -33,18 +15,24 @@ import {} from 'dotenv/config';
 import logger from './src/core/helpers/console.js';
 import loadPlugins from './src/core/helpers/installDep.js';
 import environments from './src/core/helpers/environments.get.js';
-import logo from './src/logo.js';
+import Banner from './src/Banner.js';
+import Sleep from './src/Sleep.js';
 import ora from 'ora';
-
+import chalk from 'chalk';
 console.clear();
 
 
 const _1_MINUTE = 60000;
 let restartCount = 0;
-logo();
+Banner();
 async function main() {
+
+  //update_loading.stop();
   await update();
   await loadPlugins();
+  const loading = ora(chalk.bold.hex('#3c8da3').bold('»[•STARTING•]« ') + 'STARTING PROJECT').start();
+  Sleep(10000);
+  loading.stop();
   const child = spawn('node', ['--trace-warnings', '--experimental-import-meta-resolve', '--expose-gc', 'src/nhatcoder.js'], {
     cwd: process.cwd(),
     stdio: 'inherit',
@@ -66,8 +54,9 @@ async function main() {
   });
 };
 async function update() {
-  logger.custom("Checking for updates...",
-    "UPDATE");
+  //const update_loading = ora(chalk.bold.hex('#3c8da3').bold('»[•UPDATE•]« ') + 'Checking update new version...').start();
+  //Sleep(3000);
+  //update_loading.stop();
   try {
     const res = await axios.get('https://raw.githubusercontent.com/nhatcoder2003/Gbot-War/main/package.json');
 

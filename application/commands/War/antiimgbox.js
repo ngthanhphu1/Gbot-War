@@ -1,11 +1,11 @@
 const config = {
   name: "atimg",
-  aliases: ["antiimgbox"],
+  aliases: ["atimg"],
   description: "Chống đổi ảnh box",
   usage: "on|off",
   cooldown: 3,
   permissions: [2],
-  credits: "WaifuCat"
+  credits: "Nhật Ngáo"
 };
 
 const langData = {

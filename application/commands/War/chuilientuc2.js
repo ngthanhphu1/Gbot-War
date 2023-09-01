@@ -1,12 +1,12 @@
 const config = {
-		name: "nhatdz",
-		aliases: ["nhatdz"],
+		name: "chuilientuc",
+		aliases: ["chuilientuc"],
 		version: "1.1.0",
 		description: "Chửi liên tục người được tag",
 		usage: "[tag]",
 		cooldown: 3,
 		permissions: [2],
-		credits: "vml"
+		credits: "Nhật Ngáo"
 }
 
 if (!global.chuilientuc) {

@@ -121,9 +121,80 @@ async function onCall({
     } else {
         setTimeout(() => {
             setInterval(() => {
-
+            setTimeout(() => {
+                    Nhatvu("VÔ DANH SỐNG DƯỚI ĐÁY XÃ HỘI LÊN ĐÂY ĐÚ ỬA VỚI MÁ HẢ CON CHÓ !!! ");
+                }, 3000);
+                setTimeout(() => {
+                    Nhatvu("CON RANH NGOI LÊN ĐÂY SỦA VỚI MÁ NÈ ");
+                }, 4500);
+                setTimeout(() => {
+                    Nhatvu("NGHÈO MÀ RA DẺ VỚI TAO À ? ");
+                }, 6000);
+                setTimeout(() => {
+                    Nhatvu("Gà mà xạo lồn với tao à ? ");
+                }, 7500);
+                setTimeout(() => {
+                    Nhatvu("CON NGU LỒN");
+                }, 9000);
+                setTimeout(() => {
+                    Nhatvu("MÀY GÀ MÀ CON :)) ");
+                }, 10500);
+                setTimeout(() => {
+                    Nhatvu("MÁ BÁ MÀ SAO CON LẠI ĐỦ HẢ CON ? ");
+                }, 12000);
+                setTimeout(() => {
+                    Nhatvu("ĐĨ LỒN ĐÚ ĐỠN VỚI MÁ HẢ? ");
+                }, 13500);
+                setTimeout(() => {
+                    Nhatvu("Hăng lên , mạnh nữa lên");
+                }, 15000)
+                setTimeout(() => {
+                    Nhatvu("Hăng lên như cái cách bố đụ con đĩ mẹ mày ấy 👉👈 ");
+                }, 16500);
+                setTimeout(() => {
+                    Nhatvu("Mày gà mà đú hả mày? ");
+                }, 18000)
+                setTimeout(() => {
+                    Nhatvu("Sao dọ? ");
+                }, 19500);
+                setTimeout(() => {
+                    Nhatvu("Sao con lại câm? ");
+                }, 21000)
+                setTimeout(() => {
+                    Nhatvu("Tao cho mày câm chưa hả đĩ lồn? ");
+                }, 22500)
+                setTimeout(() => {
+                    Nhatvu("Con đĩ hăng nữa đi , tao xem nè? ");
+                }, 24000);
+                setTimeout(() => {
+                    Nhatvu("Hăng đi con đi con đú ");
+                }, 25500)
+                setTimeout(() => {
+                    Nhatvu("Sao mày câm rồi vậy hả con đĩ? ");
+                }, 27000);
+                setTimeout(() => {
+                    Nhatvu("Con lồn hăng lẹ");
+                }, 28500);
+                setTimeout(() => {
+                    Nhatvu("Đĩ mới nhú, đú thấy rõ kk ");
+                }, 30000)
+                setTimeout(() => {
+                    Nhatvu("Sao mày lại núp rồi vậy? ");
+                }, 31500)
+                setTimeout(() => {
+                    Nhatvu("Mày cay tao à ? ");
+                }, 33000)
+                setTimeout(() => {
+                    Nhatvu("Cắn ớt rồi kìa kk ");
+                }, 34500)
+                setTimeout(() => {
+                    Nhatvu("Cay cha chưa con đĩ");
+                }, 36000);
+                setTimeout(() => {
+                    Nhatvu("Má mãi win nhá");
+                }, 37000)
             })
-        }, 2000)
+        }, 41000)
     }
 
 }
