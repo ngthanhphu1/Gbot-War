@@ -1,0 +1,55 @@
+{
+  "name": "gbot-war",
+<<<<<<< HEAD
+  "version": "1.0.3",
+=======
+  "version": "1.2.5",
+>>>>>>> 7cb0778 (Fix Update)
+  "description": "Gbot is a utility for mass spamming and cursing others in messager group mailboxes developed by NhatVu",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index "
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhatcoder2003/gbot-war.git"
+  },
+  "keywords": [
+    "Nhatcoder",
+    "spam",
+    "messenger",
+    "gbot"
+  ],
+  "author": "Nhat Vu",
+  "license": "MIT ",
+  "bugs": {
+    "url": "https://github.com/nhatcoder2003/gbot-war/issues"
+  },
+  "homepage": "https://github.com/nhatcoder2003/gbot-war#readme",
+  "dependencies": {
+    "@replit/database": "^2.0.5",
+    "axios": "^1.4.0",
+    "center-align": "^1.0.1",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.9.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "^0.0.1-security",
+    "gradient-string": "^2.0.2",
+    "helmet": "^7.0.0",
+    "js-yaml": "^4.1.0",
+    "moment-timezone": "^0.5.43",
+    "mongoose": "^7.4.4",
+    "nhatcoder-fb-api": "^2.6.5",
+    "node-cron": "^3.0.2",
+    "ora": "^5.0.0",
+    "semver": "^7.5.4",
+    "string-similarity": "^4.0.4",
+    "wikijs": "^6.4.1",
+    "ytdl-core": "^4.11.5"
+  }
+}
