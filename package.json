@@ -4,8 +4,8 @@
   "description": "Gbot is a utility for mass spamming and cursing others in messager group mailboxes developed by NhatVu",
   "main": "index.js",
   "scripts": {
-    "start": "node nhatcoder",
-    "update": "node update",
+    "start": "sh script/start.sh",
+    "update": "sh script/update.sh",
     "setup": "sh script/setup.sh"
   },
   "type": "module",
