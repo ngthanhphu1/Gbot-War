@@ -3,6 +3,7 @@
     <a href="https://github.com/nhatcoder2003/Gbot-War">
         <img src="https://about.nhatcoder.id.vn/logo.png" alt="Logo">
     </a>
+    </p>
 
 
 >  Mọi vấn đề bản quyền hãy gửi mail cho tôi qua ___nhatcoder2003@gmail.com___
@@ -24,15 +25,16 @@ ___Blog: https://nhatcoder2k3.name.vn___
 
 ### SOCIAL
 
-•[Facebook](https://www.facebook.com/vuminhnhat10092003)
+- [Facebook](https://www.facebook.com/vuminhnhat10092003)
 
-•[Youtube](https://www.youtube.com/@nvcoder)
+- [Youtube](https://www.youtube.com/@nvcoder)
 
-•[Discord](https://discord.com/channels/@me/1077229600817557566)
+- [Discord](https://discord.com/channels/@me/1077229600817557566)
     
 # GIỚI THIỆU
 
 Đây là mã nguồn bot được lấy từ dự án [XaviaBot](https://github.com/XaviaTeam/XaviaBot) của [XaviaTeam](https://github.com/XaviaTeam) đã được mình chỉnh sửa lại để chạy trên termux, mình sửa lại với mục đích học hỏi và chia sẻ tới dân ửa 4.0 :)
+
 
 # HƯỚNG DẪN CÀI ĐẶT
 
@@ -53,13 +55,19 @@ https://f-droid.org/packages/com.termux/
 
 - Chạy dòng lệnh bên dưới để cài đặt các thư mục cần thiết 
 
-```npm install```
+```
+npm run setup
+```
 
 - Sau khi cài đặt các thư viện thành công các bạn tiến hành dùng C3C để lấy appstate dán vào file appstate.json như những dự án bot khác.
 
 - Bước cuối cùng để chạy bot là:
-```node index```
+```
+npm run start
+```
+
 # LỜI KẾT
+
 Đây là dự án mình chỉnh sửa lại từ mã nguồn ___Xaviabot___ mình đã xóa hết các file lệnh cũ của ___Xaviabot___ các bạn có thể cắm những file khác của Xavia vào chạy bình thường nhé :)
 
 __Thank to XaviaTeam__

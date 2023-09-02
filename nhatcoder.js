@@ -59,7 +59,7 @@ async function update() {
   //update_loading.stop();
   try {
     const res = await axios.get('https://raw.githubusercontent.com/nhatcoder2003/Gbot-War/main/package.json');
-
+    //const res
     const {
       version
     } = res.data;
