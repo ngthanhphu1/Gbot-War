@@ -67,7 +67,8 @@ async function update() {
     if (semver.lt(currentVersion, version)) {
       logger.warn(`New version available: ${version}`);
       logger.warn(`Current version: ${currentVersion}`);
-      logger.warn('Vui lòng cập nhật lên phiên bản mới nhất bằng lệnh node update');
+      logger.error('Vui lòng cập nhật lên phiên bản mới nhất để sử dụng bot');
+      process.exit();
     } else {
       logger.custom("No updates available.", "UPDATE");
     }
