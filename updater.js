@@ -132,7 +132,7 @@ const toStringScripts = (scripts = []) => {
     text += "After Update:\n";
     descriptions.forEach(item => {
       text += `-${item}\n`;
-    }
+    });
   }
   return text;
 }
