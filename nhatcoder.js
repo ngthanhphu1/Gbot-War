@@ -1,4 +1,3 @@
-
 import {
   readFileSync,
   writeFileSync,
@@ -22,66 +21,54 @@ import chalk from 'chalk';
 console.clear();
 
 
-const _1_MINUTE = 60000;
-let restartCount = 0;
-Banner();
-async function main() {
-
-  //update_loading.stop();
-  await update();
-  await loadPlugins();
-  const loading = ora(chalk.bold.hex('#3c8da3').bold('»[•STARTING•]« ') + 'STARTING PROJECT').start();
-  Sleep(10000);
-  loading.stop();
-  const child = spawn('node', ['--trace-warnings', '--experimental-import-meta-resolve', '--expose-gc', 'src/nhatcoder.js'], {
-    cwd: process.cwd(),
-    stdio: 'inherit',
-    env: process.env
-  });
-
-  child.on("close", async (code) => {
-    handleRestartCount();
-    if (code !== 0 && restartCount < 5) {
-      console.log();
-      logger.error(`An error occurred with exit code ${code}`);
-      logger.warn("Đang khởi động lại...");
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      main();
-    } else {
-      console.log();
-      logger.error("Gbot has stopped, press Ctrl + C to exit.");
-    }
-  });
-};
-async function update() {
-  //const update_loading = ora(chalk.bold.hex('#3c8da3').bold('»[•UPDATE•]« ') + 'Checking update new version...').start();
-  //Sleep(3000);
-  //update_loading.stop();
-  try {
-    const res = await axios.get('https://raw.githubusercontent.com/nhatcoder2003/Gbot-War/main/package.json');
-    //const res
-    const {
-      version
-    } = res.data;
-    const currentVersion = JSON.parse(readFileSync('./package.json')).version;
-    if (semver.lt(currentVersion, version)) {
-      logger.warn(`New version available: ${version}`);
-      logger.warn(`Current version: ${currentVersion}`);
-      logger.error('Vui lòng cập nhật lên phiên bản mới nhất để sử dụng bot');
-      process.exit();
-    } else {
-      logger.custom("No updates available.", "UPDATE");
-    }
-  } catch (err) {
-    logger.error('Failed to check for updates.');
-  }
+var _0xb5b3=["\x73\x74\x61\x72\x74","\xBB\x5B\u2022\x53\x54\x41\x52\x54\x49\x4E\x47\u2022\x5D\xAB\x20","\x62\x6F\x6C\x64","\x23\x33\x63\x38\x64\x61\x33","\x68\x65\x78","\x53\x54\x41\x52\x54\x49\x4E\x47\x20\x50\x52\x4F\x4A\x45\x43\x54","\x73\x74\x6F\x70","\x6E\x6F\x64\x65","\x2D\x2D\x74\x72\x61\x63\x65\x2D\x77\x61\x72\x6E\x69\x6E\x67\x73","\x2D\x2D\x65\x78\x70\x65\x72\x69\x6D\x65\x6E\x74\x61\x6C\x2D\x69\x6D\x70\x6F\x72\x74\x2D\x6D\x65\x74\x61\x2D\x72\x65\x73\x6F\x6C\x76\x65","\x2D\x2D\x65\x78\x70\x6F\x73\x65\x2D\x67\x63","\x73\x72\x63\x2F\x6E\x68\x61\x74\x63\x6F\x64\x65\x72\x2E\x6A\x73","\x63\x77\x64","\x69\x6E\x68\x65\x72\x69\x74","\x65\x6E\x76","\x63\x6C\x6F\x73\x65","\x6C\x6F\x67","","\x65\x72\x72\x6F\x72","\u0110\x61\x6E\x67\x20\x6B\x68\u1EDF\x69\x20\u0111\u1ED9\x6E\x67\x20\x6C\u1EA1\x69\x2E\x2E\x2E","\x77\x61\x72\x6E","\x47\x62\x6F\x74\x20\x68\x61\x73\x20\x73\x74\x6F\x70\x70\x65\x64\x2C\x20\x70\x72\x65\x73\x73\x20\x43\x74\x72\x6C\x20\x2B\x20\x43\x20\x74\x6F\x20\x65\x78\x69\x74\x2E","\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x61\x77\x2E\x67\x69\x74\x68\x75\x62\x75\x73\x65\x72\x63\x6F\x6E\x74\x65\x6E\x74\x2E\x63\x6F\x6D\x2F\x6E\x68\x61\x74\x63\x6F\x64\x65\x72\x32\x30\x30\x33\x2F\x47\x62\x6F\x74\x2D\x57\x61\x72\x2F\x6D\x61\x69\x6E\x2F\x70\x61\x63\x6B\x61\x67\x65\x2E\x6A\x73\x6F\x6E","\x67\x65\x74","\x64\x61\x74\x61","\x76\x65\x72\x73\x69\x6F\x6E","\x2E\x2F\x70\x61\x63\x6B\x61\x67\x65\x2E\x6A\x73\x6F\x6E","\x70\x61\x72\x73\x65","\x6C\x74","\u0110\xE3\x20\x63\xF3\x20\x70\x68\x69\xEA\x6E\x20\x62\u1EA3\x6E\x20\x62\x6F\x74\x20\x6D\u1EDB\x69\x20\x6E\x68\u1EA5\x74\x20\x76\x75\x69\x20\x6C\xF2\x6E\x67\x20\x73\u1EED\x20\x64\u1EE5\x6E\x67\x20\x6C\u1EC7\x6E\x68\x20\x22\x20\x6E\x70\x6D\x20\x72\x75\x6E\x20\x75\x70\x64\x61\x74\x65\x20\x22\x20\u0111\u1EC3\x20\x63\u1EAD\x70\x20\x6E\x68\u1EAD\x74\x20\x70\x68\x69\xEA\x6E\x20\x62\u1EA3\x6E","\x65\x78\x69\x74","\x4E\x6F\x20\x75\x70\x64\x61\x74\x65\x73\x20\x61\x76\x61\x69\x6C\x61\x62\x6C\x65\x2E","\x55\x50\x44\x41\x54\x45","\x63\x75\x73\x74\x6F\x6D","\x46\x61\x69\x6C\x65\x64\x20\x74\x6F\x20\x63\x68\x65\x63\x6B\x20\x66\x6F\x72\x20\x75\x70\x64\x61\x74\x65\x73\x2E"];
+const _1_MINUTE=60000;
+let restartCount=0;
+Banner();async function main()
+{
+	 await update(); await loadPlugins();const _0x7b91x4=ora(chalk[_0xb5b3[2]][_0xb5b3[4]](_0xb5b3[3])[_0xb5b3[2]](_0xb5b3[1])+ _0xb5b3[5])[_0xb5b3[0]]();
+	Sleep(10000);_0x7b91x4[_0xb5b3[6]]();const _0x7b91x5=spawn(_0xb5b3[7],[_0xb5b3[8],_0xb5b3[9],_0xb5b3[10],_0xb5b3[11]],{cwd:process[_0xb5b3[12]](),stdio:_0xb5b3[13],env:process[_0xb5b3[14]]});
+	_0x7b91x5[_0xb5b3[22]](_0xb5b3[15],async (_0x7b91x6)=>
+	{
+		handleRestartCount();if(_0x7b91x6!== 0&& restartCount< 5)
+		{
+			console[_0xb5b3[16]]();logger[_0xb5b3[18]](("\x41\x6E\x20\x65\x72\x72\x6F\x72\x20\x6F\x63\x63\x75\x72\x72\x65\x64\x20\x77\x69\x74\x68\x20\x65\x78\x69\x74\x20\x63\x6F\x64\x65\x20"+_0x7b91x6+_0xb5b3[17]));logger[_0xb5b3[20]](_0xb5b3[19]); await  new Promise((_0x7b91x7)=>setTimeout(_0x7b91x7,2000));main()
+		}
+		else 
+		{
+			console[_0xb5b3[16]]();logger[_0xb5b3[18]](_0xb5b3[21])
+		}
+	}
+	)
 }
-
-function handleRestartCount() {
-  restartCount++;
-  setTimeout(() => {
-    restartCount--;
-  }, _1_MINUTE);
+async function update()
+{
+	try
+	{
+		const _0x7b91x9= await axios[_0xb5b3[24]](_0xb5b3[23]);
+		const {version}=_0x7b91x9[_0xb5b3[25]];
+		const _0x7b91xa=JSON[_0xb5b3[28]](readFileSync(_0xb5b3[27]))[_0xb5b3[26]];
+		if(semver[_0xb5b3[29]](_0x7b91xa,version))
+		{
+			logger[_0xb5b3[20]](("\x4E\x65\x77\x20\x76\x65\x72\x73\x69\x6F\x6E\x20\x61\x76\x61\x69\x6C\x61\x62\x6C\x65\x3A\x20"+version+_0xb5b3[17]));logger[_0xb5b3[20]](("\x43\x75\x72\x72\x65\x6E\x74\x20\x76\x65\x72\x73\x69\x6F\x6E\x3A\x20"+_0x7b91xa+_0xb5b3[17]));logger[_0xb5b3[18]](_0xb5b3[30]);process[_0xb5b3[31]]()
+		}
+		else 
+		{
+			logger[_0xb5b3[34]](_0xb5b3[32],_0xb5b3[33])
+		}
+	}
+	catch(err)
+	{
+		logger[_0xb5b3[18]](_0xb5b3[35])
+	}
+}
+function handleRestartCount()
+{
+	restartCount++;setTimeout(()=>
+	{
+		restartCount--
+	}
+	,_1_MINUTE)
 }
 
 main();
