@@ -35,7 +35,6 @@ const checkUpdate = async () => {
     if (newVersionIndex != -1) {
       for (const [, versionAfter] of Object.entries(data).slice(newVersionIndex)) {
         const scriptsURL = `https://raw.githubusercontent.com/nhatcoder2003/GbotWarUpdate/main/Update/${versionAfter}.json`;
-        
         const scripts = (await axios.get(scriptsURL)).data;
 
         updateScriptsArr.push(scripts);
@@ -103,8 +102,7 @@ const toStringScripts = (scripts = []) => {
   const {
     changed,
     added,
-    removed,
-    descriptions
+    removed
   } = scripts;
   let text = "";
 
@@ -128,12 +126,7 @@ const toStringScripts = (scripts = []) => {
       text += `- ${item}\n`;
     });
   }
-  if(descriptions.length > 0){
-    text += "After Update:\n";
-    descriptions.forEach(item => {
-      text += `-${item}\n`;
-    });
-  }
+
   return text;
 }
 
